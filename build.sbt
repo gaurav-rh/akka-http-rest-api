@@ -14,3 +14,4 @@ libraryDependencies += "com.typesafe.akka" %% "akka-http" % "10.2.6"
 // Only when running against Akka 2.5 explicitly depend on akka-streams in same version as akka-actor
 libraryDependencies += "com.typesafe.akka" %% "akka-stream" % "2.6.18" // or whatever the latest version is
 libraryDependencies += "com.typesafe.akka" %% "akka-actor"  % "2.6.18"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.11" % "test"

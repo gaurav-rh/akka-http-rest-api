@@ -1,14 +1,13 @@
 package com.knoldus.restapiassignment
 
 import scala.collection.mutable.ListBuffer
+import scala.util.Try
 
 //import com.knoldus.restapiassignment.RestApiAssignment.userList
 
 trait UserRepo {
 
   def getUser(name:String): ListBuffer[User]
-
-  def getUser(id: Int): ListBuffer[User]
 
   def getAllUsers(): ListBuffer[User]
 

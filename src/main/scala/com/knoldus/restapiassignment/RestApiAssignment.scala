@@ -35,9 +35,6 @@ object RestApiAssignment extends App {
       (path("getUser" / Segment) & get) { name =>
         complete(userImpl.getUser(name).toJson.prettyPrint)
       } ~
-      (path("getUser" / IntNumber) & get) { id =>
-        complete(userImpl.getUser(id).toJson.prettyPrint)
-      } ~
       (path("addUser") & post) {
         parameters("name", "age".as[Int], "email") { (name, age, email) =>
           userImpl.addUser(name,age,email)

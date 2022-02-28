@@ -1,21 +1,18 @@
 package com.knoldus.restapiassignment
 
-//import com.knoldus.restapiassignment.RestApiAssignment.User
-
 import scala.collection.mutable.ListBuffer
+import scala.util.{Failure, Success, Try}
 
 class UserImpl extends UserRepo {
 
 
-  val user = User(1,"Gaurav", 25, "gauravraj.raj49@gmail.com")
+  //val user: User = User(1,"Gaurav", 25, "gauravraj.raj49@gmail.com")
 
-  var userList: ListBuffer[User] = ListBuffer(user)
+  var userList: ListBuffer[User] = ListBuffer()
 
-  var Uid = userList.length
+  var Uid: Int = userList.length
 
   override  def getUser(name:String):ListBuffer[User] = userList.filter(_.name == name)
-
-  override  def getUser(id: Int): ListBuffer[User] = userList.filter(_.id != id)
 
   override def getAllUsers(): ListBuffer[User] = userList
 
